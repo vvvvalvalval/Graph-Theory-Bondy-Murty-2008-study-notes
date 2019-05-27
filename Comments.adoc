@@ -7,7 +7,7 @@
 A matching is a set of non-adjacent edges. We like to make matchings as big as possible; small matchings are easy, big matchings are hard.
 Finding a maximum matching is like pairing up adjacent vertices, leaving as few vertices as possible unmatched.
 
-**Climbing analogy:** a group of climbers go climbing in the mountains, but they don't all know each other. They have to pair up to climb, but each can only pair up with someone they know - because, you know, it could be dangerous. Then the goal is to find the right pair, so that as many people as possible can climb at the same time.
+**Climbing analogy:** a group of climbers go climbing in the mountains, but they don't all know each other. They have to pair up to climb, but each can only pair up with someone they know - because, you know, it could be dangerous. Then the goal is to find the right pairing, so that as many people as possible can climb at the same time.
 
 M-augmenting path are a way of transitioning from a matching to a larger matching. 
  **Berge's theorem** tells you that following such transitions does not get you stuck in local maxima: you always end up in a maximum matching.
