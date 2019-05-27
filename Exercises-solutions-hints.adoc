@@ -9,7 +9,7 @@ Don't expect to find *all* the answers here :)
 
 The crux of the exercise is in a)ii), which boils down to proving the following analysis result: `(exp(x) + exp(-x))/2 <= exp(x^2 / 2)`.
 
-It looks like high-school math, but it's surprisingly more difficult; you have multiplications inside the exponential and additions outside, which is exactly the opposite of what you want. I've had great fun challenging my scientifically-inclined friends with this problem, it usually drives them crazy in a matter of hours. **Hint** in 3, 2, 1...
+It looks like high-school math, but it's surprisingly more difficult; you have multiplications inside the exponential and additions outside, which is exactly the opposite of what you want. I've had great fun challenging my scientifically-inclined friends with this problem, it usually drives them crazy in a matter of hours (if that's any consolation to them, it took me half a dozen attempts, spread over 2 days). **Hint** in 3, 2, 1...
 
 Hint: write each side of the result as power series.
 
