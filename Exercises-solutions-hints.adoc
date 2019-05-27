@@ -1,0 +1,37 @@
+= Exercises solutions and hints
+
+Don't expect to find *all* the answers here :)
+
+
+== Chapter 16: Matchings
+
+=== 16.1.15
+
+I'm currently at a loss for this one. I've seen only solutions using the König-Egervary Theorem, but the exercise is actually intended as a Lemma for this theorem.
+
+=== 16.2.7
+
+Not that easy IMHO!
+
+a) I prove that any edge `e`, joining `x` to `y`, us covered. Nothing to prove if `x` is in `Z`. If `x` is in `Z`, consider an M-alternating path starting from U ending in x; prove it either contains y or can be extended to end in y, as in the latter case x would not be matched to y.
+
+b) 2 observations here:
+
+* all vertices in X \ R are matched (as U is contained in R)
+* a vertex in X \ R is never matched to a vertex in B
+
+Counting the matched vertices in Y, it then follows that |M*| is greater than or equal to |X\Z| + |B|, which is exactly |K*|.
+
+=== 16.2.8
+
+Not easy either IMHO. There's an error in the problem statement: it's actually |S| - |N(S)| in a).
+
+The hard part of the exercise is the 'if' part of a)ii): let M a maximum matching, and S the set of vertices in X reachable from U by M-alternating paths. Note that S contains U.
+
+Use Berge's theorem to prove that all neighbours of S are matched to a vertex of S (I decomposed S into matched and unmatched vertices, then you get `|N(S)| = |N(S\U)| = |S\U| = |S| - |U|`). 
+
+
+
+=== 16.2.11
+
+I answered that one https://math.stackexchange.com/a/3231948/141752[here].
