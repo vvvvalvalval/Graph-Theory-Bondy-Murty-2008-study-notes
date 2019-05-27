@@ -3,6 +3,16 @@
 Don't expect to find *all* the answers here :)
 
 
+== Chapter 13: the Probabilitic Method
+
+=== 13.3.4
+
+The crux of the exercise is in a)ii), which boils down to proving the following analysis result: `(exp(x) + exp(-x))/2 <= exp(x^2 / 2)`.
+
+It looks like high-school math, but it's surprisingly more difficult; you have multiplications inside the exponential and additions outside, which is exactly the opposite of what you want. I've had great fun challenging my scientifically-inclined friends with this problem, it usually drives them crazy in a matter of hours. **Hint** in 3, 2, 1...
+
+Hint: write each side of the result as power series.
+
 == Chapter 16: Matchings
 
 === 16.1.15
@@ -37,7 +47,7 @@ Use Berge's theorem to prove that all neighbours of S are matched to a vertex of
 I answered that one https://math.stackexchange.com/a/3231948/141752[here].
 
 
-== 16.2.18
+=== 16.2.18
 
 You prove that there's a permutation matrix which support is contained in the support of Q, then use induction.
 
@@ -51,10 +61,10 @@ It's worth noting that the left cosets are the equivalence classes by the equiva
 
 Therefore each coset has `|K|` elements, i.e all vertices of G have degree |K|; the Hall condition can be deduced from that.
 
-== 16.2.27
+=== 16.2.27
 
 No difficulty in a), it's the same as for finite graphs.
 
 My counterexample is a graph which vertices are the natural integers, each `n` joined to `n+1`, plus an additional vertex `x` joined to all odd integer. Considering the odd integer matched to `x`, it follows that `0` can't be matched.
 
-Now I wondered if I cheated by using a vertex of infinite degree. AFAICT, it turns out that if you forbid infinite degrees, then there is no counter example. I view this as a consequence of the https://en.wikipedia.org/wiki/Compactness_theorem[Compactness Theorem] of boolean logic.
+Now I wondered if I cheated by using a vertex of infinite degree. AFAICT, it turns out that if you forbid infinite degrees, then there is no counter example. I view this as a consequence of the https://en.wikipedia.org/wiki/Compactness_theorem[Compactness Theorem] of boolean logic: each edge is a boolean variable, and a matching is an assignment of truth that satisfies a set of boolean formulas.
