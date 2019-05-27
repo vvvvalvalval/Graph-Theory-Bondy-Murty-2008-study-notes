@@ -17,13 +17,13 @@ Hint: write each side of the result as power series.
 
 === 16.1.15
 
-I'm currently at a loss for this one. I've seen only solutions using the König-Egervary Theorem, but the exercise is actually intended as a Lemma for this theorem.
+I'm currently at a loss for this one. I've seen online solutions using the König-Egervary Theorem, but the exercise is actually intended as a Lemma for this theorem.
 
 === 16.2.7
 
 Not that easy IMHO!
 
-a) I prove that any edge `e`, joining `x` to `y`, us covered. Nothing to prove if `x` is in `Z`. If `x` is in `Z`, consider an M-alternating path starting from U ending in x; prove it either contains y or can be extended to end in y, as in the latter case x would not be matched to y.
+a) I prove that any edge `e`, joining `x` to `y`, us covered. Nothing to prove if `x` is not in `Z`. If `x` is in `Z`, consider an M-alternating path starting from U ending in x; prove it either contains y or can be extended to end in y, as in the latter case x would not be matched to y.
 
 b) 2 observations here:
 
@@ -51,7 +51,7 @@ I answered that one https://math.stackexchange.com/a/3231948/141752[here].
 
 You prove that there's a permutation matrix which support is contained in the support of Q, then use induction.
 
-To get the first result, you model this with a bipartite graph which vertices are the lines of Q (rows on the left, columns on the right), and the edges are the non-zero entries of Q, each incident to the row and line containing it. Hall's condition can be deduced by considering row sums and columns sums.
+To get the first result, you model this with a bipartite graph which vertices are the lines of Q (rows on the left, columns on the right), and the edges are the non-zero entries of Q, each incident to the row and line containing it. Hall's condition can be deduced by considering row sums and column sums.
 
 === 16.2.20
 
@@ -67,4 +67,4 @@ No difficulty in a), it's the same as for finite graphs.
 
 My counterexample is a graph which vertices are the natural integers, each `n` joined to `n+1`, plus an additional vertex `x` joined to all odd integers. Assuming a perfect matching, and considering the odd integer matched to `x`, it follows that `0` can't be matched.
 
-Now I wondered if I cheated by using a vertex of infinite degree. AFAICT, it turns out that if you forbid infinite degrees, then there is no counter example. I view this as a consequence of the https://en.wikipedia.org/wiki/Compactness_theorem[Compactness Theorem] of boolean logic: each edge is a boolean variable, and a matching is an assignment of truth that satisfies a set of boolean formulas.
+Now I wondered if I cheated by using a vertex of infinite degree. AFAICT, it turns out that if you forbid infinite degrees, then there is no counter example. I view this as a consequence of the https://en.wikipedia.org/wiki/Compactness_theorem[Compactness Theorem] of boolean logic: each edge is a boolean variable, and a matching is an assignment of truth that satisfies a set of boolean formulas. I find this rather neat actually: Hall's theorem gives you full matchings for finite subgraphs, then the compactness theorem generalizes to the whole graph.
