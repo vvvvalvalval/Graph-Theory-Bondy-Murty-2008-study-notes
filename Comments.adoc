@@ -14,7 +14,7 @@ M-augmenting path are a way of transitioning from a matching to a larger matchin
  
 I find this illuminating, because at first sight matchings are not a very "path-esque" notion.
 
-=== 16.2 Hall's Theorem
+=== 16.2 Matchings in Bipartite Graphs
 
 Hall's Theorem gives you a necessary, and more importantly sufficient condition for the existence of a matching covering one side X of a bipartite graph G[X,Y]:
  namely, that each subset of X has no less neighbours than vertices.
@@ -24,8 +24,12 @@ Konig-Ore's formula (ex 16.2.7) generalizes this result to not just know if ther
 In the proofs of both theorems, you consider the set of vertices reachable from unmatched vertices by M-alternating paths.
 
 
-=== 16.3
+=== 16.3 Matchings in arbitrary graphs
 
 Barriers seem to play an opposite role to M-augmenting paths: they're evidence that a matching is maximum. Like Hall's theorem, it's a matter of computing the cardinalites of subsets of vertices, but this time it's odd components, not neighbours.
 
 Not obviously at all, all graphs have a barrier: that's the Tutte-Berge Theorem.
+
+It's not very apparent from (16.3) that the definition of a barrier is independent from the matching considered; to make it clearer, you can define a barrier as a set `B` of vertices such that `o(G-B) - |B| = n - 2α'`.
+
+It's insightful to view the Tutte-Berge theorem as a min/max theorem: the minimum number of unmatched vertices for all matchings is equal to the maximum of `o(G-S) - S` for all proper subsets `S` of `G`.
