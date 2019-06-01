@@ -19,6 +19,8 @@ Hint: write each side of the result as power series.
 
 I'm currently at a loss for this one. I've seen online solutions using the König-Egervary Theorem, but the exercise is actually intended as a Lemma for this theorem.
 
+The result is easily deduced from Lemma 16.10 2 sections later, so maybe the proof of 16.10 could be adapted for this special case.
+
 === 16.2.7
 
 Not that easy IMHO!
@@ -68,3 +70,16 @@ No difficulty in a), it's the same as for finite graphs.
 My counterexample is a graph which vertices are the natural integers, each `n` joined to `n+1`, plus an additional vertex `x` joined to all odd integers. Assuming a perfect matching, and considering the odd integer matched to `x`, it follows that `0` can't be matched.
 
 Now I wondered if I cheated by using a vertex of infinite degree. AFAICT, it turns out that if you forbid infinite degrees, then there is no counter example. I view this as a consequence of the https://en.wikipedia.org/wiki/Compactness_theorem[Compactness Theorem] of boolean logic: each edge is a boolean variable, and a matching is an assignment of truth that satisfies a set of boolean formulas. I find this rather neat actually: Hall's theorem gives you full matchings for finite subgraphs, then the compactness theorem generalizes to the whole graph.
+
+=== 16.3.8
+
+**ERRATUM:** the final result is not quite correct; it should be "a **connected** graph is hypomatchable iff the empty set is its only barrier", or the more general "the **components of a graph** are hypomatchable iff the empty set is its only barrier."
+
+a) 
+
+i) The problem statement should be "a **connected** graph is hypomatchable iff each of its blocks is hypomatchable". Both direction of the equivalence can be proved by induction on the number of blocks. Considering a separating vertex `s` separating G into two subgraphs `H` and `H'`, and a vertex `v` of H, consider how to construct a perfect matching of `G-v` can be built from / decomposed into perfect matchings of `H-v` and `H'-s`.
+
+   ii) The 'only if' part is easily proved by applying (16.2). For the 'if' part, you first deduce from Tutte-Berge that the empty set is the only barrier of G (it's the only one that might achieve equality in (16.3)). You can then first prove the result for a non-separable graph, applying the inequality for `S = {v}` to deduce that `G-v` is matchable by Tutte-Berge. You can then prove that the hypothesis inequality applies to each block of G; to do that, it helps to picture the blocks-decomposition-tree of G, and observe that the all blocks of G are odd; you can then prove that the components of `G-S` can be obtained from the components of `H-s` by either adding separate components or extending components of `H-S` with an even number of vertices, and so `H-S` has no more odd components than `G-S`. Finally you apply a)i).
+
+b) The 'if' part is the hard one. For a vertex `v`, and a proper subset `S` of `V`, observe the equivalence `(G-v)-S = G-(S∪{v})`; use the fact that `S∪{v}` is not a barrier of G to show that `G-v` is matchable with the Tutte-Berge formula, making a case analysis between G even (`o(G) = 0`) and odd (`o(G) = 1`).
+
