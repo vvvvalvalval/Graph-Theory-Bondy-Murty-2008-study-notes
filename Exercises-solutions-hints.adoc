@@ -98,3 +98,6 @@ Given an arc `a` in `S`, we then make the following case distinction:
 
 **case 2:** if `a` appears in several fundamental cycles, then `a` is in the tree `T`. We can pick a fundamental cycle containing `a`, corresponding to a non-zero entry in the column of `a`, and then add or substract it to other rows of `C` so as to nullify the other entries in the column of `a` without changing the determinant. It can be shown (A) that this yields the basis matrix associated with another tree `T'` of `G`, namely one consisting of removing `a` from `T` and adding back the cotree arc corresponding to the row we picked. This brings us back to case 1. To prove (A), you can consider how the `T'`-path joining the ends of cotree arc relates to the corresponding `T`-path: it consists of going 'the other way around' the fundamental cycle we initially picked.
 
+image::img/20-4-3.jpg[]
+
+
