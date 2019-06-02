@@ -83,3 +83,18 @@ i) The problem statement should be "a **connected** graph is hypomatchable iff e
 
 b) The 'if' part is the hard one. For a vertex `v`, and a proper subset `S` of `V`, observe the equivalence `(G-v)-S = G-(S∪{v})`; use the fact that `S∪{v}` is not a barrier of G to show that `G-v` is matchable with the Tutte-Berge formula, making a case analysis between G even (`o(G) = 0`) and odd (`o(G) = 1`).
 
+
+== Chapter 20: Electrical Networks
+
+=== 20.4.3
+
+Detailing for the Circulation Space, the Tension Space is analogous.
+
+We prove the result by induction on the dimension of the Circulation Space, i.e the size of a cotree. Observe that selecting rows from `C` is equivalent to removing arcs from the cotree, so it's sufficient to consider only full-height square submatrices of C and prove they have a determinant in `{-1, 0, 1}`. We therefore consider a set `S` of `dim(C)` columns/arcs of `C`.
+
+Given an arc `a` in `S`, we then make the following case distinction:
+
+**case 1:** if `a` appears in no more than 1 fundamental cycle, then its column contains at most 1 non-zero entry, and we can compute the determinant applying induction.
+
+**case 2:** if `a` appears in several fundamental cycles, then `a` is in the tree `T`. We can pick a fundamental cycle containing `a`, corresponding to a non-zero entry in the column of `a`, and then add or substract it to other rows of `C` so as to nullify the other entries in the column of `a` without changing the determinant. It can be shown (A) that this yields the basis matrix associated with another tree `T'` of `G`, namely one consisting of removing `a` from `T` and adding back the cotree arc corresponding to the row we picked. This brings us back to case 1. To prove (A), you can consider how the `T'`-path joining the ends of cotree arc relates to the corresponding `T`-path: it consists of going 'the other way around' the fundamental cycle we initially picked.
+
