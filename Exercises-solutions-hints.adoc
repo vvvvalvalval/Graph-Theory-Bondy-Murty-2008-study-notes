@@ -101,3 +101,10 @@ Given an arc `a` in `S`, we then make the following case distinction:
 image::img/20-4-3.jpg[]
 
 
+=== 20.5.2
+
+The result is `r_xy = (n -1) / m`. The main ideas of the proof are:
+
+1. Given to edges `e1` and `e2` of G, exactly 1 autormorphism in `m` sends `e1` to `e2`.
+2. To each spanning tree `T'` of `G/e` and each automorphism of `G`, there corresponds exactly one spanning tree `T(e')` of `G` with a marked edge `e'` with an automorphism sending `e'` to `e`.
+3. The 'spanning trees ratio formula' of Corollary 20.23 lets you then work out `r_xy` from 2.
