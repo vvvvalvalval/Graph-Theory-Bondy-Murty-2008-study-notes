@@ -2,6 +2,12 @@
 
 Don't expect to find *all* the answers here :)
 
+== Chapter 6: tree-search algorithms
+
+=== 6.2.1
+
+By induction on the number of edges. If `m = n - 1`, then `G` is a tree and there is nothing to prove. Otherwise, let `e` the maximum-weight non-cut-edge of G; then show that `e` is in no optimal tree of G, therefore the optimal trees of `G` are the optimal trees of `H := G \ e`, of which there is only one by induction hypothesis.
+
 
 == Chapter 13: the Probabilitic Method
 
