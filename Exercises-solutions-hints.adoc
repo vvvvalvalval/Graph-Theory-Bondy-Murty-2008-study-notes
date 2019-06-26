@@ -6,7 +6,7 @@ Don't expect to find *all* the answers here :)
 
 === 6.1.10
 
-What does it mean for every DFS-tree to be a Hamilton path? It essentially means that if you walk the graph by always following links to 'unexplored' vertices, you won't reach a 'dead-end' before having exhausted all the vertices of the graph (DFS-trees 'branch' when you are forced to 'back-track' after having reached a dead-end).
+What does it mean for every DFS-tree to be a Hamilton path? It essentially means that if you walk the graph by always following links to 'unexplored' vertices, wherever you start from and whatever navigation choices you make, you won't reach a 'dead-end' before having exhausted all the vertices of the graph (DFS-trees 'branch' when you are forced to 'back-track' after having reached a dead-end).
 
 image::img/6-1-10.jpg[]
 
