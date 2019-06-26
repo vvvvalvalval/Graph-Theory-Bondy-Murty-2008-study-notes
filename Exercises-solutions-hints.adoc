@@ -10,7 +10,7 @@ What does it mean for every DFS-tree to be a Hamilton path? It essentially means
 
 image::img/6-1-10.jpg[]
 
-The idea of the proof is to use this observation to 'deduce' new edges from known sets of new edges:
+The idea of the proof is to use this observation to 'deduce' new edges from previously identified sets of edges:
 
 * **Lemma 1 ('path -> cycle'):** if `G` contains a Hamilton Path `uPv`, then `G` contains the edge `(v, u)`; in other words `P` can be extended to a Hamilton Cycle. We prove it by starting a DFS-tree from the second vertex of the path - see figure.
 
