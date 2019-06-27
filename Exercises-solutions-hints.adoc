@@ -20,7 +20,9 @@ Therefore `G` contains a Hamilton cycle; we index the vertices of `G` by the `Zn
 
 * **Lemma 3 ('chord -> chord + 2'):** if `G` contains a chord `(i, i+k)`, then `G` also contains the chord `(i, i+k+2)`. 
 
-From Lemmata 2 and 3 it is easily seen that if `G` contains a chord, then G is either a complete graph, or a complete bipartite graph with evenly sized bipartitions.
+* **Lemma 4 ('2-chord -> 3-chord'):** if `G` contains a chord `(i, i+2)`, then `G` also contains the chord `(i, i+3)`. By Lemma 1, we can prove it by constructing a Hamilton path from `i` to `i+3`: starting from `i`, we follow the 2-chord to `i+2`, then 1 edge counterclockwise to `i+1`, then to `i-1` through a 2-chord (which exists by Lemma 2), then follow the peripheral path to `i+3`. (Not drawn on the figure).
+
+From these lemmata, it is easily seen that if `G` contains a chord, then `G` is either a complete graph, or a complete bipartite graph with evenly sized parts; in particular, the existence of a 2-chord is the decisive factor for the completeness of `G`.
 
 === 6.2.1
 
