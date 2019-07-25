@@ -39,6 +39,26 @@ It looks like high-school math, but it's surprisingly more difficult; you have m
 
 Hint: write each side of the result as power series.
 
+=== 13.3.18: the Countable Random Graph
+
+a) There's no trick to the proof; one just has to be careful of justifying the probabilistic manipulations properly, as we're dealing with infinite families of events here. In particular:
+
+* Given X and Y, the infinite family of events "z is either adjacent to some vertex in Y, or not adjacent to some vertex in X" (for z outside of X and Y) are independent and of constant probability; this can be used to prove that the intersection of these events has probability 0.
+* The family of pairs of disjoint finite subsets (X,Y) is countable; viewing the negation of property we try to prove as a union of events indexed by (X,Y), one can deduce that the probability of this union is less than the sum of their probabilities (which are all zero).
+
+b) As a technical prerequisite, observe that the property in a) can be refined as follows: the vertex z can always be chosen outside of X and Y (if every vertex in Y has a neighbour in Y, that has to be the case; if not, you can extend Y to make it so). 
+
+Now, given 2 graphs G and H with that property, you could build an induced subgraph of H isomorphic to G with the following procedure:
+
+* choose an enumeration (x0, x1, x2, ...) of V(G)
+* map x0 to any vertex of H, calling it y0
+* for n > 0, using property a), choose yn such that for m < n, yn is adjacent to ym iff xn is adjacent to xm.
+
+Of course, that's not quite what we want, since we only have produced an isomorphism to an induced subgraph of H, not to H itself. By the way, this shows that a graph with property a) contains _every_ countable graph as an induced subgraph, which is rather interesting in itself. 
+
+The above procedure only needs a small alteration to actually yield an isomorphism between G and H. Essentially, instead of always choosing the next 'source' vertex from G and finding a 'mirror' vertex in H, you pick the 'source' vertex alternatively from G and H; this ensures that all vertices of G and H are covered by the procedure.
+
+
 == Chapter 16: Matchings
 
 === 16.1.15
